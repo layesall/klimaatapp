@@ -1,12 +1,14 @@
-import React from 'react';
-import {View, Text} from 'react-native';
+import React from "react";
+import { View, Text, SafeAreaView } from "react-native";
 
-import Styles from './HomeScreen.styles';
+import HeaderComponent from "../../components/HeaderComponent/HeaderComponent";
+import Styles from "./HomeScreen.styles";
 
-export default function HomeScreen(){
+export default function HomeScreen() {
   return (
-    <View style={Styles.container}>
+    <SafeAreaView style={Styles.container}>
+      <HeaderComponent />
       <Text style={Styles.title}>Home Screen</Text>
-    </View>
+    </SafeAreaView>
   );
 }
