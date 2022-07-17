@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { useNavigation, useRoute } from '@react-navigation/native'
 import { Text, SafeAreaView, Pressable } from 'react-native'
-import { FontAwesome } from '@expo/vector-icons'
 
 import Styles from './HeaderComponent.styles'
+import { getIcon } from '../../utils/utils'
 
 export default function HeaderComponent() {
   const navigation = useNavigation();
@@ -16,7 +16,7 @@ export default function HeaderComponent() {
   const handleRoute = () => {
     if(route !== 'home'){
       return <Pressable onPress={() => navigation.goBack()}>
-        <FontAwesome name='long-arrow-left' color='white' size={24} />
+        {getIcon('long-arrow-left', 'white', 24)}
       </Pressable>
     }
   }
