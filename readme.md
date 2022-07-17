@@ -25,5 +25,5 @@ This template follows a very simple project structure:
 
 ## Workspace links
 
-- Github : <https://github.com/ablause/SwipeMovie.git>
+- Github : <https://github.com/layesall/klimaatapp.git>
 - Icons : <https://icons.expo.fyi/>
