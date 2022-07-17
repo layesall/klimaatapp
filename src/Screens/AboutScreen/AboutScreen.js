@@ -1,12 +1,14 @@
-import React from 'react';
-import {View, Text} from 'react-native';
+import React from "react";
+import { View, Text, SafeAreaView } from "react-native";
 
-import Styles from './AboutScreen.styles';
+import HeaderComponent from "../../components/HeaderComponent/HeaderComponent";
+import Styles from "./AboutScreen.styles";
 
-export default function AboutScreen(){
+export default function AboutScreen() {
   return (
-    <View style={Styles.container}>
+    <SafeAreaView style={Styles.container}>
+      <HeaderComponent />
       <Text style={Styles.title}>About Screen</Text>
-    </View>
+    </SafeAreaView>
   );
 }

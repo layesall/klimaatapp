@@ -9,11 +9,16 @@ const Tab = createBottomTabNavigator();
 
 export default function MainStack() {
   return (
-    <NavigationContainer>
-      <Tab.Navigator initialRouteName="home">
-        <Tab.Screen name="home" component={HomeScreen} />
-        <Tab.Screen name="about" component={AboutScreen} />
-      </Tab.Navigator>
-    </NavigationContainer>
+    <>
+      <NavigationContainer>
+        <Tab.Navigator
+          initialRouteName="home"
+          screenOptions={{ headerShown: false }}
+        >
+          <Tab.Screen name="home" component={HomeScreen} />
+          <Tab.Screen name="about" component={AboutScreen} />
+        </Tab.Navigator>
+      </NavigationContainer>
+    </>
   );
 }
