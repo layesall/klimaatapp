@@ -1,28 +1,28 @@
 import React, { useEffect, useState } from "react";
 import {
   SafeAreaView,
-  Text,
   TextInput,
-  Pressable,
-  Keyboard,
 } from "react-native";
-import { getIcon } from "../../utils/utils";
 
+import useWeather from '../../hooks/useWeather'
 import Styles from "./FormComponent.styles";
 
 export default function FormComponent() {
   const [inputValue, setInputValue] = useState(undefined);
 
+  const weather = useWeather(inputValue);
+
+  // console.log(weather);
+
   return (
     <SafeAreaView style={Styles.container}>
       <TextInput
-        value={inputValue}
+        defaultValue={inputValue}
         placeholder="city name"
         style={Styles.input}
+        onChangeText={(city) => setInputValue(city)}
+        onSubmitEditing={() => console.log(inputValue)}
       />
-      <Pressable style={Styles.submit}>
-        {getIcon("search", "white", 24)}
-      </Pressable>
     </SafeAreaView>
   );
 }
