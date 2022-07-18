@@ -5,6 +5,7 @@ import {
 } from "react-native";
 
 import useWeather from '../../hooks/useWeather'
+import CardComponent from "../CardComponent/CardComponent";
 import Styles from "./FormComponent.styles";
 
 export default function FormComponent() {
@@ -12,7 +13,7 @@ export default function FormComponent() {
 
   const weather = useWeather(inputValue);
 
-  // console.log(weather);
+  console.log(weather);
 
   return (
     <SafeAreaView style={Styles.container}>
@@ -23,6 +24,7 @@ export default function FormComponent() {
         onChangeText={(city) => setInputValue(city)}
         onSubmitEditing={() => console.log(inputValue)}
       />
+      <CardComponent city={weather.name} humidity={weather.main.humidity} temp={weather.main.temp} windSpeed={weather.wind.speed} />
     </SafeAreaView>
   );
 }
