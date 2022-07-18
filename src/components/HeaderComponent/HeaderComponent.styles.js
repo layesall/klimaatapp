@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native'
+import colors from '../../theme/colors'
 
 export default StyleSheet.create({
   container: {
@@ -7,11 +8,11 @@ export default StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    backgroundColor: '#2980B9',
+    backgroundColor: colors.primary,
     paddingHorizontal: 10,
   },
   logoText: {
-    color: 'white',
+    color: colors.secondary,
     fontSize: 25,
     fontWeight: 'bold',
     textTransform: 'uppercase',
