@@ -17,4 +17,8 @@ export default StyleSheet.create({
     borderRadius: 10,
     marginVertical: 10,
   },
+  submit:{
+    width: '100%',
+    color: 'red'
+  },
 });
