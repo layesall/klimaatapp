@@ -1,26 +1,26 @@
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import HomeScreen from "../screens/HomeScreen/HomeScreen";
 import AboutScreen from "../screens/AboutScreen/AboutScreen";
-import {getIcon} from "../utils/utils";
-import colors from "../theme/colors";
+import WeatherScreen from "../screens/WeatherScreen/WeatherScreen";
 
-const Tab = createBottomTabNavigator();
+const Stack = createNativeStackNavigator();
 
 export default function MainStack() {
   return (
     <>
       <NavigationContainer>
-        <Tab.Navigator
+        <Stack.Navigator
           initialRouteName="home"
           screenOptions={{ headerShown: false }}
         >
-          <Tab.Screen name="home" component={HomeScreen} options={{ tabBarIcon: () => getIcon('home', colors.primary, 24) }} />
-          <Tab.Screen name="about" component={AboutScreen} options={{ tabBarIcon: () => getIcon('user', colors.primary, 24) }}  />
-        </Tab.Navigator>
+          <Stack.Screen name="home" component={HomeScreen} />
+          <Stack.Screen name="about" component={AboutScreen} />
+          <Stack.Screen name="weather" component={WeatherScreen}  />
+        </Stack.Navigator>
       </NavigationContainer>
-    </>
+    </> 
   );
 }
