@@ -24,7 +24,7 @@ export default function FormComponent() {
         onChangeText={(city) => setInputValue(city)}
         onSubmitEditing={() => console.log(inputValue)}
       />
-      <CardComponent city={weather.name} humidity={weather.main.humidity} temp={weather.main.temp} windSpeed={weather.wind.speed} />
+      <CardComponent city={weather.name} temp={weather.main.temp} description={weather.weather[0].description} tempMax={weather.main.temp_max} tempMin={weather.main.temp_min} humidity={weather.main.humidity} windSpeed={weather.wind.speed} />
     </SafeAreaView>
   );
 }
