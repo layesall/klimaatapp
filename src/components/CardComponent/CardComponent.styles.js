@@ -5,9 +5,6 @@ export default StyleSheet.create({
   container: {
     width: '100%',
     paddingHorizontal: 10,
-    borderColor: colors.primary,
-    borderWidth: 2,
-    borderRadius: 10,
   },
   infoPrimeContainer:{
     justifyContent: 'center',
@@ -16,28 +13,33 @@ export default StyleSheet.create({
     marginVertical: 10,
     padding: 10,
   },
-  city:{
-    fontSize: 20
-  },
   temperature:{
     fontSize: 70,
     fontWeight: 'bold',
   },
+  city:{
+    fontSize: 20
+  },
+  description:{
+    fontSize: 15,
+    color: colors.gray,
+    marginVertical: 10,
+  },
   infoSecondContainer:{
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
-    flexWrap: 'wrap',
-    width: '100%',
     padding: 10,
   },
   info:{
-    justifyContent: 'center',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
     alignItems: 'center',
-    width: 150,
-    height: 100,
-    backgroundColor: colors.primary,
-    color: colors.secondary,
-    margin: 10,
+    width: "100%",
+    height: 50,
+    backgroundColor: colors.secondary,
+    marginVertical: 5,
+    borderRadius: 10,
+    padding: 10,
+  },
+  infoText:{
+    color: colors.dark,
   }
 });
